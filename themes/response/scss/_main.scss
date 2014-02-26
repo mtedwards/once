@@ -1,0 +1,43 @@
+.reveal-modal {
+  h2, p {
+    color: #111;
+  }
+}
+
+
+p.lead {
+  font-size: 1.7em;
+  line-height: 1.3;
+}
+
+.main-document {
+  background: url(../img/main-bg.jpg) center bottom no-repeat;
+  padding-bottom: 1em;
+}
+
+.entry-content {
+  @include clearfix;
+  background: url(../img/content-bg.png) repeat-y;
+  background-size: 100% auto;
+  padding: 25px;
+  margin-bottom: 10px;
+  color:#111;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    top:-10px;
+    left:0;
+    height: 14px;
+    background: url(../img/content-top3.png) no-repeat;
+    background-size: 100% 100%;
+  }
+  p {
+    color: #111;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #111;
+  }
+}

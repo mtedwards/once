@@ -1,0 +1,110 @@
+.sidebar {
+  text-align: center;
+  h3 {
+    margin-bottom: 0;
+  }
+  
+  form {
+    
+    small {
+      position: relative;
+      top:-13px;
+    }
+  
+    input {
+      border: none;
+      background: url(../img/form-field-background.png) no-repeat;
+      background-size: 100% 100%;
+       @include input-placeholder {
+            color: $primary-color;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+      }
+      &:focus {
+        background: url(../img/form-field-background.png) no-repeat;
+        background-size: 100% 100%;
+        border-color: inherit;
+        border: none;
+        outline: none;
+        
+        }
+    }
+  
+    .custom.dropdown {
+        border: none;
+        background: url(../img/form-field-background.png) no-repeat;
+        background-size: 100% 100%;
+        a.selector {
+          color: #111;
+        }
+    }
+    
+    input#submit {
+      width: 100%;
+      padding: 10px;
+      background: url(../img/button_submit-bgd.png) no-repeat;
+      background-size: 100% 100%;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  }
+  
+  @media screen and (max-width:600px){
+   .small-4 {
+     width: 100%;
+   } 
+  }
+}
+
+
+
+
+
+.social {
+  @include clearfix;
+  margin: 0 auto;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin:5px;
+    &:first-child {
+      margin-left: 0;
+    }
+    a {
+      display: block;
+      height: 33px;
+      width: 33px;
+      text-indent: -9999px;
+    
+      &.facebook {
+        background: url('../img/social.png') no-repeat 0 0;
+        &:hover, &:focus {
+          background: url('../img/social.png') no-repeat 0 -35px;
+        }
+      } 
+      
+      &.twitter {
+        background: url('../img/social.png') no-repeat -38px 0;
+        &:hover, &:focus {
+          background: url('../img/social.png') no-repeat -38px -35px;
+        }
+      }
+      
+      &.instagram {
+        background: url('../img/social.png') no-repeat -76px 0;
+        &:hover, &:focus {
+          background: url('../img/social.png') no-repeat -76px -35px;
+        }
+      }
+      
+      &.youtube {
+        background: url('../img/social.png') no-repeat -114px 0;
+        &:hover, &:focus {
+          background: url('../img/social.png') no-repeat -114px -35px;
+        }
+      }
+    }
+  }
+}
+

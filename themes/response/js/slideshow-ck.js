@@ -1,0 +1,1 @@
+$.fn.ezslide=function(e){var t={fadeIn:1e3,fadeOut:100,delay:6e3},n=$.extend(t,e),r=this,i=0,s=function(e){var t=r.find("li");i=e=e>=t.length?0:e;t.fadeOut(n.fadeOut);t.eq(e).delay(n.fadeOut).fadeIn(n.fadeIn,function(){setTimeout(function(){i++;s(i)},n.delay)})};s(i)};$(".reviews").ezslide();

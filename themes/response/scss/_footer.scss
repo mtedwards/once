@@ -1,0 +1,23 @@
+.main-footer {
+  p {
+    font-size: 0.7em;
+    margin-bottom: 0;
+  }
+  
+  ul {
+    float: right;
+    li {
+      float: right;
+      margin-left:10px;
+      a {
+        color: white;
+        font-size: 0.8em;
+        text-decoration: underline;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  
+}

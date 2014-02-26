@@ -1,0 +1,194 @@
+nav.top-bar {
+  @media screen and (min-width:900px){
+    display: none;
+    }
+  }
+  
+.social-button-box {
+  width: 320px;
+  padding-left: 0;
+}
+
+.quotes {
+  width: 580px;
+  padding-right: 0;
+}
+  
+ul.social-buttons {
+  float: right;
+  margin: 15px 0 0 0;
+  li {
+    float: left;
+    margin-left: 8px;
+  }
+}
+  
+div.navigation {
+  display: none;
+  @media screen and (min-width:900px){
+    display: block;
+    background: url(../img/top-bar.png) center top no-repeat;
+    height: 109px;
+    .row {
+      min-height: 55px;
+      .main-menu {
+        li {
+          float: left;
+          font-size: 1.5em;
+          padding-right: 1em;
+          a {
+            line-height: 50px;
+            color: #111;
+            text-transform: lowercase;
+            font-weight: bold;
+          }
+          a:hover, &.current-menu-item a{
+            color: white;
+          }
+        }
+      }
+      .dates {
+        text-align: right;
+        font-size: 1.5em;
+        line-height: 50px;
+        b {color:#111;}
+      }
+    }
+  }
+}
+
+.quotes {
+  height: 55px;
+  overflow: hidden;
+  blockquote {
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 50px;
+  font-size: 16px;
+  color: #111;
+  display: inline;
+  border-left:none;
+  margin-left:0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 0;
+  cite {
+    display: inline;
+    color: #111;
+     &:before {
+        content: "\0020";
+      }
+  }  
+  }
+
+}
+
+
+header.main-header {
+  .columns:first-child {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;  
+  }
+  
+  h1 a {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 40%;
+    text-indent:-9999px;
+    background: url(../img/once-horizontal.jpg) no-repeat;
+    background-size:contain;
+  }
+
+  @media only screen and (min-width: 560px) {
+
+    @for $i from 1 through $total-columns {
+      .medium#{-$i} { @include grid-column($columns:$i,$collapse:null,$float:false); }
+    }
+
+    @for $i from 0 through $total-columns - 1 {
+      .medium-offset-#{$i} { @include grid-column($offset:$i, $collapse:null,$float:false); }
+    }
+
+    @for $i from 1 through $total-columns - 1 {
+      .medium-push#{-$i} { @include grid-column($push:$i, $collapse:null, $float:false); }
+      .medium-pull#{-$i} { @include grid-column($pull:$i, $collapse:null, $float:false); }
+    }
+  }
+}
+
+
+.tony {
+  position: relative;
+  background: url(../img/tony-lockup-2.png) no-repeat;
+  background-size:contain;
+  width: 100%;
+  height: 0;
+  padding-bottom: 30%;
+}
+
+
+
+.itunes {
+  position: relative;
+  background: url(../img/itunes-bg.png) no-repeat;
+  background-size:contain;
+  width: 100%;
+  height: 0;
+  padding-bottom: 21%;
+  margin: 5% 0;
+  @media screen and (min-width: 700px) {
+    margin: 11% 0 0;
+  }
+  
+  li {
+    display: none;
+    &.active {
+      display: block;
+    }
+    b {
+      position: absolute;
+      top:50%;
+      left:60px;
+      margin-top: -13px;
+      font-weight: normal;
+    }
+    a.buy-itunes {
+      position: absolute;
+      right:10px;
+      top:50%;
+      margin-top: -17px;
+    }
+  }
+  
+  .mejs-container {
+      position: absolute;
+      top:50%;
+      margin-top: -26px;
+      left:15px;
+      background: transparent;
+      width: 32px !important;
+      height: 32px !important;
+    .mejs-controls {
+
+      background: none;
+      //background-color: transparent;
+  
+        .mejs-time, .mejs-time-rail, .mejs-time, .mejs-volume-button, .mejs-horizontal-volume-slider {
+          display: none;
+        }
+        .mejs-playpause-button button {
+          box-shadow: none;
+          width: 32px !important;
+          height: 32px !important;
+          background: url('../img/play-pause.png') no-repeat 0 0 !important;
+          }
+        .mejs-playpause-button.mejs-pause button {
+            background: url('../img/play-pause.png') no-repeat -43px 0  !important;
+          }
+    } 
+  }
+  
+}

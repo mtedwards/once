@@ -1,0 +1,28 @@
+body.home {
+  @media screen and (min-width:665px) {
+  section.main-document {
+    background: url(../img/home-background-2.jpg);
+    background-size: cover;
+    height: 565px;
+    h1 a {
+      background: none;
+    }
+    .main-header .columns {
+      min-height: 565px;
+    }
+    
+    .tony {
+      margin-top: 312px;
+      margin-left: 35px;
+      margin-bottom: 10px;
+      width: 90%;
+    }
+    .itunes {
+      margin-top: 0px;
+      margin-left: 35px;
+      width: 90%;
+      padding-bottom: 19%;
+    }
+  }
+ }
+}

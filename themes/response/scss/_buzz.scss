@@ -1,0 +1,18 @@
+.buzz {
+  img {
+    width: 100%;
+  }
+  
+  blockquote {
+    color: #111;
+    text-align: center;
+    border-left: none;
+    font-size: 1.3em;
+    line-height: 1.1em;
+    font-weight: bold;
+    cite {
+      color: #333;
+      font-size: 0.6em;
+    }
+  }
+}

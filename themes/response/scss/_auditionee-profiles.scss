@@ -1,0 +1,33 @@
+ul.auditionee-type {
+  li a{
+    &:hover {
+      color:#111;
+    }
+  }
+  li a.current {
+    color:#111;
+    font-weight: bold;
+  }
+}
+
+ul.compact {
+  > li {
+    font-size: 0.7em;
+    
+    h2 {
+      margin-bottom: 0;
+      padding: 0;
+    }
+    ul, h5.contact {
+      display: none;
+    }
+    img {
+      max-width: 80px;
+      height: auto;
+    }
+  }
+}
+
+.right {
+  text-align: right;
+}

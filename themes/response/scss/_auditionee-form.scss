@@ -1,0 +1,35 @@
+@media screen and (min-width:700px){
+  .gform_wrapper {
+    ul {
+      li.gfield {
+      
+        &.gsection {
+          padding-top: 30px;
+        }
+        
+        &.half, &.two_thirds, &.one_third {
+          float: left;
+          clear: none;
+          input.medium, textarea {
+            width: 95%;
+          }
+          textarea {
+            height: 60px;
+          }
+        }
+        
+        &.half {
+          width: 50%;
+        }
+        
+        &.two_thirds {
+          width:66.66%
+        }
+        
+        &.one_third {
+          width:33.33%;
+        }
+      }
+    }
+  }
+}
