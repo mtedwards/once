@@ -15,7 +15,7 @@ function reverie_theme_support() {
 	add_image_size( 'homepage-thumb', 220, 180, true ); // 220 pixels wide by 180 pixels tall, hard crop mode
 	add_image_size( 'page-thumb', 300, 300, true ); // 220 pixels wide by 180 pixels tall, hard crop mode
 	// set_post_thumbnail_size(150, 150, false);
-	
+	add_image_size( 'slider', 700, 280, true );
 	// rss thingy
 	add_theme_support('automatic-feed-links');
 	

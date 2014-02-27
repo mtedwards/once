@@ -21,7 +21,7 @@
 // @codekit-prepend "foundation/foundation.forms.js"
 // @codekit-prepend "foundation/foundation.placeholder.js"
 // @codekit-prepend "foundation/foundation.reveal.js"
-// @codekit-prepend "foundation/foundation.topbar.js"
+// @codekit-prepend "foundation/foundation.topbar.js", "foundation/foundation.orbit.js"
 // @codekit-prepend "fitvids.js"
 // @codekit-prepend "respond.js"
 
