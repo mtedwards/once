@@ -128,6 +128,9 @@
   	 </div>
   	 <div class="small-12 medium-6 columns">
   	   <?php if(is_front_page()) { ?>
+  	   	<div class="byline">
+	  	   	his music needed one thing.<br>her.
+  	   	</div>
         <div class="tony half">
         </div>
         <div class="itunes half">

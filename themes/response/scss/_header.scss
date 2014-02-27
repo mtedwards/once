@@ -12,7 +12,7 @@ nav.top-bar {
 .quotes {
   width: 580px;
   padding-right: 0;
-}
+  }
   
 ul.social-buttons {
   float: right;
@@ -20,7 +20,11 @@ ul.social-buttons {
   li {
     float: left;
     margin-left: 8px;
+    &:first-child {
+	    margin-top:-3px;
+    }
   }
+  
 }
   
 div.navigation {
@@ -28,6 +32,9 @@ div.navigation {
   @media screen and (min-width:900px){
     display: block;
     background: url(../img/top-bar.png) center top no-repeat;
+    .home & {
+	    background: url(../img/top-bar-home.jpg) center top no-repeat;
+    }
     height: 109px;
     .row {
       min-height: 55px;
@@ -40,10 +47,11 @@ div.navigation {
             line-height: 50px;
             color: #111;
             text-transform: lowercase;
-            font-weight: bold;
+            font-weight: 600;
           }
           a:hover, &.current-menu-item a{
-            color: white;
+            color: #111;
+            text-decoration: underline;
           }
         }
       }
@@ -51,7 +59,7 @@ div.navigation {
         text-align: right;
         font-size: 1.5em;
         line-height: 50px;
-        b {color:#111;}
+        color:#111;
       }
     }
   }
@@ -71,14 +79,23 @@ div.navigation {
   margin-left:0;
   padding-left: 0;
   padding-right: 0;
-  margin-right: 0;
-  cite {
-    display: inline;
-    color: #111;
-     &:before {
-        content: "\0020";
-      }
-  }  
+  margin-right: 0;  
+	  cite {
+	    display: inline;
+	    color: #111;
+	     &:before {
+	        content: "\0020";
+	      }
+	}
+    .home & {
+	  color: white;
+	  span {
+		  color: $primary-color;
+	  }
+	  cite {
+		  color: white;
+	  }
+  }
   }
 
 }
@@ -122,18 +139,18 @@ header.main-header {
 
 .tony {
   position: relative;
-  background: url(../img/tony-lockup-2.png) no-repeat;
+  background: url(../img/tony-lockup4.png) no-repeat;
   background-size:contain;
   width: 100%;
   height: 0;
-  padding-bottom: 30%;
+  padding-bottom: 18%;
 }
 
 
 
 .itunes {
   position: relative;
-  background: url(../img/itunes-bg.png) no-repeat;
+  background: url(../img/itunes-bg2.png) no-repeat;
   background-size:contain;
   width: 100%;
   height: 0;
@@ -183,10 +200,10 @@ header.main-header {
           box-shadow: none;
           width: 32px !important;
           height: 32px !important;
-          background: url('../img/play-pause.png') no-repeat 0 0 !important;
+          background: url('../img/play.png') no-repeat 0 0 !important;
           }
         .mejs-playpause-button.mejs-pause button {
-            background: url('../img/play-pause.png') no-repeat -43px 0  !important;
+            background: url('../img/pause.png') no-repeat 0 0  !important;
           }
     } 
   }

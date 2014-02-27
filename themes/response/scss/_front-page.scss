@@ -1,9 +1,10 @@
 body.home {
   @media screen and (min-width:665px) {
+ 
   section.main-document {
-    background: url(../img/home-background-2.jpg);
+    background: url(../img/home-bg3.jpg);
     background-size: cover;
-    height: 565px;
+    height: 568px;
     h1 a {
       background: none;
     }
@@ -12,17 +13,36 @@ body.home {
     }
     
     .tony {
-      margin-top: 312px;
-      margin-left: 35px;
+      position: relative;
+      margin-top: 40px;
+      margin-left: -330px;
       margin-bottom: 10px;
-      width: 90%;
+      width: 75%;
+      @media screen and (min-width:900px) {
+	  	margin-left: -310px;    
+	    width: 120%;
+      }
     }
+    
+    
     .itunes {
-      margin-top: 0px;
+      margin-top: 330px;
       margin-left: 35px;
       width: 90%;
       padding-bottom: 19%;
     }
   }
  }
+}
+
+.byline {
+	display: none;
+	@media screen and (min-width:665px){
+		display: block;
+		position: absolute;
+		top:420px;
+		left:-90%;
+		font-size: 25px;
+		line-height: 1.5em;
+	}
 }
