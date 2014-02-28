@@ -61,15 +61,6 @@ if(function_exists("register_field_group"))
 						'formatting' => 'html',
 					),
 					array (
-						'key' => 'field_517cc27b21df4',
-						'label' => 'YouTube Link',
-						'name' => 'youtube',
-						'type' => 'text',
-						'column_width' => '',
-						'default_value' => '',
-						'formatting' => 'html',
-					),
-					array (
 						'key' => 'field_517cc28621df5',
 						'label' => 'Download Url',
 						'name' => 'download',
@@ -169,6 +160,7 @@ if(function_exists("register_field_group"))
 					<div class="small-12 columns">
 						<?php if ( !post_password_required() ): ?>
 						<div class="row">
+							<div class="small-12 columns">
 							<?php $files = get_field('files');
 							if($files) { ?>
 							<h2>Files:</h2>
@@ -188,39 +180,37 @@ if(function_exists("register_field_group"))
 									endforeach;
 								}
 								?>
+							</div>
 						</div>
 						<div class="row">
+							<div class="small-12 columns">
 							<?php $videos = get_field('video'); 
 								if($videos) {
 							?>
 								<h2>Videos:</h2>
-								<?php foreach ( $videos as $video ):
-								 // Get Thumbnail
-									       $videolnk = $video['youtube'];
-									       $videolnk = str_replace('http://youtu.be/','http://img.youtube.com/vi/',$videolnk);
-									       $videolnk .= "/0.jpg";
-									      ?>
-
+								<?php foreach ( $videos as $video ): ?>
+									<?php
+										$url = 'http://www.example.com/search.php?arg1=arg2';					
+										$parts = parse_url($url);
+										$str = $parts['scheme'].'://'.$parts['host'].$parts['path'];
+										echo $str;
+									?>
+								
+								
 									<div class="row">
-										<div class="small-2 columns">
-											<a href="<?php echo $video['download']; ?>">
-												<img class="file" src="<?php echo $videolnk; ?>" >
-											</a>
-										</div>
-										<div class="small-10 columns">
-											<h4><?php echo $video['title']; ?>:</h4>
-											<h4>
-												<a href="<?php echo $video['youtube']; ?>"> View on YouTube</a><br>
-												<a href="<?php echo $video['download']; ?>">Download Video File</a>
+										<div class="small-12 columns">
+											<h4><?php echo $video['title']; ?>: <a href="<?php echo $video['download']; ?>" target="_blank" download="">Download Video File</a>
 											</h4>
 										</div>
 									</div>
 									<hr>		
 								<?php endforeach; 
 							} // End if ?>
+							</div>
 						</div>
 
 						<div class="row">
+							<div class="small-12 columns">
 							<?php $images = get_field('images'); 
 								if($images) {
 							?>
@@ -234,14 +224,15 @@ if(function_exists("register_field_group"))
 											</div>
 											<div class="small-10 columns">
 												<h4><a href="<?php echo $image['sizes']['medium']; ?>">Download: <?php echo $image['title']; ?> - Low Res</a></h4>
-												<h4><a href="<?php echo $image['url']; ?>">Download: <?php echo $image['title']; ?> - High Res</a></h4>
+												<h4><a href="<?php echo $image['url']; ?>">Download: <?php echo $image['title']; ?> - High Res</a></h4>									<p><?php echo $image['caption']; ?></p>
 											</div>
 										</div>
 										<hr>
 							<?php endforeach;
 							}
 							 ?>
-						</div>
+							</div>
+						</div><?php // end images ?>
 					<?php endif; ?>
 					</div> 
 				</div>
@@ -257,7 +248,7 @@ function change_pw_text($content) {
     $media_message = get_field('media_contact','options');
   }
 	$content = str_replace(
-	'This post is password protected. To view it please enter your password below:',
+	'This content is password protected. To view it please enter your password below:',
 	'' . $media_message . '',
 	$content);
 	return $content;

@@ -14,13 +14,9 @@
 	<meta name="viewport" content="width=device-width" />
 
 	<!-- Favicon and Feed -->
-	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 
-	<!--  iPhone Web App Home Screen Icon -->
-	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-icon-ipad.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-icon-retina.png" />
-	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-icon.png" />
 	
 	<link href="https://plus.google.com/113907490633717096036" rel="publisher" />
 	
@@ -86,6 +82,7 @@
 	  	<div class="columns quotes">
 	  	  <?php $quotes = get_field('reviews','options');
 	  	    if($quotes){
+	  	    shuffle($quotes);
   	  	    foreach($quotes as $quote){ ?>
   	  	      <?php $cite = $quote['citation']; ?>
     	  	    <blockquote><?php echo $quote['quote']; if($cite){ echo '<cite>' . $cite . '</cite>'; }?></blockquote>   

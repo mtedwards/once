@@ -15,13 +15,15 @@
 					<div class="small-12 medium-6 large-6 columns">
 						<h4>Get music on iTunes</h4>
 						<div id="itunesPlayer">
-						<iframe src="https://widgets.itunes.apple.com/widget.html?c=us&brc=FFFFFF&blc=FFFFFF&trc=FFFFFF&tlc=ffffff&height=350&d=&t=&m=music&e=album&ids=506880915&wt=discovery&partnerId=&affiliate_id=&at=&ct=" frameborder=0 style="overflow-x:hidden;overflow-y:hidden;width:100%; height: 400px;border:0px"></iframe>
+						<iframe src="https://widgets.itunes.apple.com/widget.html?c=au&brc=FFFFFF&blc=FFFFFF&trc=FFFFFF&tlc=FFFFFF&d=&t=&m=music&e=album&w=300&h=345&ids=506472607&wt=discovery&partnerId=&affiliate_id=&at=&ct=" frameborder=0 style="overflow-x:hidden;overflow-y:hidden;width:300px;height: 345px;border:0px"></iframe>
 						</div>
 					</div>
 					<div class="small-12 medium-6 large-6 columns">
 						<h4>Like and Tweet Once</h4>
 						<div class="fb-like" data-href="https://www.facebook.com/pages/Once-the-Musical-Australia/161226130747099" data-width="300" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+						<br><br>
 						<a class="twitter-timeline" height="300" href="https://twitter.com/OnceMusicalAu" data-widget-id="438908664812802049">Tweets by @OnceMusicalAu</a>
+						
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
@@ -48,6 +50,11 @@
 						  <?php } // end for each ?>
 						</ul>
 						<?php }// end if images ?>
+						<?php $credit = get_field('photo_credit'); 
+							if($credit){
+								echo '<p><small class="alignright">' . $credit . '</small><p>';
+							}
+						?>
 					</div>
 				</div>
 				<!--

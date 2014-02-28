@@ -5,6 +5,7 @@
 	
 	<?php the_post(); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+			<h1 class="hidden"><?php the_title(); ?></h1>
 			<!--
 <header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>

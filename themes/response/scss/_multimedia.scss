@@ -2,3 +2,19 @@
 	max-width: 300px;
 	margin: 0 auto;
 }
+
+ul.orbit-slides-container {
+	li {
+		img {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.orbit-container .orbit-slides-container > * .orbit-caption {
+	background-color: rgba($primary-color, 0.7);
+	text-align: center;
+	color: #000;
+	font-weight: bold;
+	font-size: 1.1em;
+}

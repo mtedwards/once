@@ -1,4 +1,9 @@
-
+h1, h2, h3 {
+	&.hidden {
+		position: absolute;
+		top:-9999px;
+	}
+}
 /* Start to customize Reverie */
 
 @mixin input-placeholder {
@@ -112,3 +117,51 @@ h1.head {
 		color: white;
 	}
 }
+
+  form, form#waitlistForm {
+    
+    small {
+      position: relative;
+      top:-13px;
+    }
+  
+    input {
+      border: none;
+      background: url(../img/form-field-background.png) no-repeat;
+      background-size: 100% 100%;
+       @include input-placeholder {
+            color: #000;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+      }
+      &:focus {
+        background: url(../img/form-field-background.png) no-repeat;
+        background-size: 100% 100%;
+        border-color: inherit;
+        border: none;
+        outline: none;
+        
+        }
+    }
+  
+    .custom.dropdown {
+        border: none;
+        background: url(../img/form-field-background.png) no-repeat;
+        background-size: 100% 100%;
+        text-align: center;
+        font-weight: bold;
+        a.selector {
+          color: #111;
+        }
+    }
+    
+    input#submit, input#waitlistSubmit {
+      width: 100%;
+      padding: 10px;
+      background: url(../img/button_submit-bgd.png) no-repeat;
+      background-size: 100% 100%;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  }
