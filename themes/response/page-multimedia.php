@@ -39,7 +39,7 @@
 							<?php foreach($images as $image){ ?>
 						  <li>
 						    <img style="width: 100%;" src="<?php echo $image['image']['sizes']['slider']; ?>">
-							<?php $caption = $image['image']['caption'];
+							<?php $caption = $image['image']['description'];
 								if($caption){
 							 ?>
 						    <div class="orbit-caption">

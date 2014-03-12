@@ -18,7 +18,7 @@
 	 </ul>
 	</div>
 </footer>
-
+<?php /*
 <div id="youTube" class="reveal-modal">
   <h2>Uploading your video to YouTube</h2>
   <p class="lead">When uploading your video audition to YouTube please select either <b>Public</b> or <b>Unlisted</b> in the video Privacy Settings.</p>
@@ -53,6 +53,23 @@ If in doubt send your video link to a friend to check they can view it before co
  
   <a class="close-reveal-modal">&#215;</a>
 </div>
+*/ ?>
+
+<?php // Classic Analytics just for Demographics etc ?>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44051658-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
 
 <?php wp_footer(); ?>
 
