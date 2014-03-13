@@ -7,29 +7,48 @@
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		<?php if(get_field('waitlist')) { $waitlist = true; }?>
 			<div class="entry-content">
-			  <h3 class="entry-title">
+			  <h1 class="entry-title">
 			    <?php if($waitlist) { ?>
   			     Waitlist for Melbourne
 			    <?php } else { ?>
 			      Book Tickets in Melbourne
 			    <?php } ?>
-			   </h3>
+			   </h1>
 			  <?php if($waitlist) { 
   			     get_template_part( 'waitlistForm' );
   			  } else { ?>
-            <div class="small-12 column">
-  			      <div class="grey-box center witches">
-                <div class="small-12 small-centered medium-6 medium-centered large-4 large-centered columns">			        
-      			      <h2 class="section-heading">Book Online</h2>
-      			      <p>Via <?php the_field('ticket_company'); ?></p>
-      			      <a href="<?php the_field('tickets_url') ?>" class="green-button button expand" onClick="_gaq.push(['_trackEvent', 'Outbound', 'Purchase', 'tickets <?php the_title() ?>']);">Book Now</a>
-      			      <p class="small">
-      			        Phone <?php the_field('tickets_phone'); ?> or 
-                    <a href="<?php the_field('ticket_outlets'); ?>">Visit an Outlet</a>
-                  </p>
-                </div>
-  			      </div><?php // end grey-box ?>
-            </div><?php // end small-12 ?>
+  			  
+  			  <div class="row">
+  			  	<div class="small-12 columns orangegrad">
+	  			  	<div class="row">
+	  			  		<div class="small-12 medium-8 medium-centered large-4 large-centered columns">
+		  			  		<h2>Book Online<br><span>Via <?php the_field('ticket_company'); ?></span></h2>
+		  			  		<a href="<?php the_field('tickets_url') ?>" class="black-button button expand" onClick="_gaq.push(['_trackEvent', 'Outbound', 'Purchase', 'tickets <?php the_title() ?>']);">Book Now</a>
+	  			  		</div>
+	  			  	</div>
+  			  	</div>
+  			  </div>
+  			  <div class="row">
+  			  	<div class="small-12 columns">
+	  			  	<ul class="block-grid">
+	  			  		<li>
+		  			  		
+	  			  		</li>
+	  			  		<li>
+		  			  		
+	  			  		</li>
+	  			  		<li>
+		  			  		
+	  			  		</li>
+	  			  	</ul>
+  			  	</div>
+  			  </div>
+                        
+                        
+                        
+                        
+                        
+                        
                         
             <div class="small-12 column">
               <div class="row balance">
