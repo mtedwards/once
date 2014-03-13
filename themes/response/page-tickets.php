@@ -4,7 +4,7 @@
 	
 	<?php /* Start loop */ ?>
 	<?php while (have_posts()) : the_post(); ?>
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+		<article <?php post_class('tickets') ?> id="post-<?php the_ID(); ?>">
 		<?php if(get_field('waitlist')) { $waitlist = true; }?>
 			<div class="entry-content">
 			  <h1 class="entry-title">
@@ -21,88 +21,42 @@
   			  <div class="row">
   			  	<div class="small-12 columns orangegrad">
 	  			  	<div class="row">
-	  			  		<div class="small-12 medium-8 medium-centered large-4 large-centered columns">
-		  			  		<h2>Book Online<br><span>Via <?php the_field('ticket_company'); ?></span></h2>
+	  			  		<div class="small-12 medium-8 medium-centered large-6 large-centered columns">
+		  			  		<h2>Book Tickets Online<br><span>Via <?php the_field('ticket_company'); ?></span></h2>
 		  			  		<a href="<?php the_field('tickets_url') ?>" class="black-button button expand" onClick="_gaq.push(['_trackEvent', 'Outbound', 'Purchase', 'tickets <?php the_title() ?>']);">Book Now</a>
 	  			  		</div>
 	  			  	</div>
   			  	</div>
   			  </div>
-  			  <div class="row">
-  			  	<div class="small-12 columns">
-	  			  	<ul class="block-grid">
-	  			  		<li>
-		  			  		
-	  			  		</li>
-	  			  		<li>
-		  			  		
-	  			  		</li>
-	  			  		<li>
-		  			  		
-	  			  		</li>
-	  			  	</ul>
-  			  	</div>
-  			  </div>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-            <div class="small-12 column">
-              <div class="row balance">
-                <div class="small-12 medium-6 columns">
-                  <div class="grey-box center">        
-          			      <h2 class="section-heading"><?php the_field('groups_heading'); ?></h2>
-          			      <p>Bring your group to OZ and save!</p>
-          			      <p>Phone <?php the_field('group_phone'); ?> or</p>
-          			      <div class="small-12 medium-12 large-8 large-centered medium-centered small-centered columns">
-            			      <a href="mailto:<?php the_field('group_email'); ?>" class="grey-button button expand" onClick="_gaq.push(['_trackEvent', 'Outbound', 'Purchase', 'groups <?php the_title() ?>']);" target="_blank">Make a Reservation</a>
-          			      </div>
-      			      </div><?php // end grey-box ?>
-                </div>
-                <div class="small-12 medium-6 columns">
-                  <div class="grey-box center">
-                    <h3 class="section-heading">
-                      Premium Tickets and Packages
-                    </h3>
-                    <p>Via Showbiz</p>
-                    <p>&nbsp;</p>
-                    <div class="small-12 medium-12 large-8 large-centered medium-centered small-centered columns">
-                      <a href="<?php the_field('vip_url'); ?>" class="grey-button button expand" onClick="_gaq.push(['_trackEvent', 'Outbound', 'Purchase', 'showbiz <?php the_title() ?>']);" target="_blank">Buy Tickets</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="small-12 column">
-              <div class="row balance">
-                <div class="small-12 medium-6 columns">
-                  <div class="grey-box center">
-                    <h3 class="section-heading">
-                      <?php the_field('special_heading'); ?>
-                    </h3>
-                    <p><?php the_field('special_details'); ?></p>
-                    <p>&nbsp;</p>
-                    <div class="small-12 medium-12 large-8 large-centered medium-centered small-centered columns">
-                      <a href="<?php the_field('special_link'); ?>" class="grey-button button expand" onClick="_gaq.push(['_trackEvent', 'Outbound', 'Purchase', 'showbiz <?php the_title() ?>']);" target="_blank"><?php the_field('special_button'); ?></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="small-12 medium-6 columns">
-                  <div class="grey-box center">
-                    <h3 class="section-heading">
-                      <?php the_field('theatre'); ?>
-                    </h3>
-                    <p class="small"><?php the_field('address'); ?> <a href="<?php the_field('google_map_link'); ?>" target="_blank">View Map</a></p>
-                    <p class="small">
-                      <?php the_field('performance_schedule'); ?>
-                    </p>
-                  </div>
-                </div>
-                
+  			 <div class="row sales-boxes">
+  			 
+  			 	<div class="small-12 medium-4 columns">
+  			 		<div class="nicebox">
+	  			 		<h2><?php the_field('groups_heading'); ?></h2>
+	  			 		<h2><span><?php the_field('group_message'); ?></span></h2>
+	  			 		<a href="mailto:<?php the_field('group_email'); ?>" class="yellow-button button expand" onClick="_gaq.push(['_trackEvent', 'Outbound', 'Purchase', 'groups <?php the_title() ?>']);" target="_blank">make enquiry</a>
+  			 		</div>
+  			 	</div>
+  			 	
+  			 	<div class="small-12 medium-4 columns">
+  			 		<div class="nicebox">
+	  			 		<h2><?php the_field('dates'); ?></h2>
+	  			 		<h2><span><?php the_field('theatre'); ?><br><a href="<?php the_field('address'); ?>" target="_blank"><?php the_field('google_map_link'); ?></a></span></h2>
+		  			 	<h3>
+			  			 	<?php the_field('performance_schedule'); ?>
+		  			 	</h3>
+		  			 </div>
+  			 	</div>
+  			 	
+  			 	<div class="small-12 medium-4 columns">
+  			 		<div class="nicebox">
+		  			 	<h2><?php the_field('special_heading'); ?><br><span><?php the_field('special_details'); ?></span></h2>
+		  			 	<img src="<?php the_field('special_image'); ?>" alt="<?php the_field('special_heading'); ?>">
+		  			 	<a href="<?php the_field('special_link') ?>" class="yellow-button button expand" onClick="_gaq.push(['_trackEvent', 'Outbound', 'Purchase', 'tickets <?php the_title() ?>']);"><?php the_field('special_button') ?></a>
+		  			 </div>
+  			 	</div>
+  			 </div>                        
+ 
                 <?php
                   $sponsors = get_field('sponsors'); 
                   if($sponsors) { ?>

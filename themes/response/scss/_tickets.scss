@@ -1,0 +1,75 @@
+article.tickets .entry-content {
+	$yellow: #f0cf00;
+	$orange: #efc031;
+	
+	// LAYOUT
+	
+	
+	.sales-boxes .columns {
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+
+	.nicebox {
+		border: 2px solid $orange;
+		padding: 5px;
+		position: relative;
+		min-height: 240px;
+	}
+	
+	.nicebox a.button {
+		position: absolute;
+		bottom: 10px;
+		width: 95%;
+		left: 2.5%;
+	}
+	
+	
+	
+	// TYPOGRAPHY
+	
+	
+	text-align: center;
+	h1, h2, h3 {
+		font-weight: 400;
+		span {
+			color: $yellow;
+		}
+	}
+	
+	h1.entry-title {
+		text-align: left;
+		font-size: 32px;
+	}
+	
+	h2 {
+		font-size: 20px;
+		line-height: 1.2em;
+	}
+	
+	h3 {
+		font-size: 16px;
+		line-height: 1.2em;
+	}
+	
+	// BUTTONS
+	
+	.black-button, .yellow-button {
+		border: none;
+		font-size: 16px;
+	}
+	
+	.black-button {
+		background: url(../img/black-button.png);
+		background-size: 100% 100%;
+		color: $yellow;
+	}
+	
+	.yellow-button {
+		background: url(../img/yellow-button.png);
+		background-size: 100% 100%;
+		color: #000;
+	}
+	
+	
+}
