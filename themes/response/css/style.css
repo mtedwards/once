@@ -4715,48 +4715,78 @@ article.tickets .entry-content {
   text-align: center; }
   /* line 8, ../scss/_tickets.scss */
   article.tickets .entry-content .sales-boxes .columns {
-    padding-left: 3px;
-    padding-right: 3px; }
-  /* line 13, ../scss/_tickets.scss */
+    padding-left: 0;
+    padding-right: 0; }
+    @media only screen and (min-width: 900px) {
+      /* line 8, ../scss/_tickets.scss */
+      article.tickets .entry-content .sales-boxes .columns {
+        padding-left: 3px;
+        padding-right: 3px; }
+        /* line 15, ../scss/_tickets.scss */
+        article.tickets .entry-content .sales-boxes .columns:first-of-type {
+          padding-left: 0; }
+        /* line 18, ../scss/_tickets.scss */
+        article.tickets .entry-content .sales-boxes .columns:last-of-type {
+          padding-right: 0; } }
+  /* line 24, ../scss/_tickets.scss */
   article.tickets .entry-content .nicebox {
     border: 2px solid #efc031;
     padding: 5px;
     position: relative;
-    min-height: 240px; }
-  /* line 20, ../scss/_tickets.scss */
-  article.tickets .entry-content .nicebox a.button {
-    position: absolute;
-    bottom: 10px;
-    width: 95%;
-    left: 2.5%; }
-  /* line 33, ../scss/_tickets.scss */
+    margin-bottom: 10px; }
+    @media only screen and (min-width: 900px) {
+      /* line 24, ../scss/_tickets.scss */
+      article.tickets .entry-content .nicebox {
+        min-height: 240px; } }
+  @media only screen and (min-width: 900px) {
+    /* line 34, ../scss/_tickets.scss */
+    article.tickets .entry-content .nicebox a.button {
+      position: absolute;
+      bottom: 10px;
+      width: 95%;
+      max-width: none;
+      left: 2.5%; } }
+  /* line 44, ../scss/_tickets.scss */
+  article.tickets .entry-content .orangegrad {
+    border: 2px solid #efc031;
+    margin-bottom: 5px;
+    background: url(../img/orangegrad-bg.png) left bottom repeat-x; }
+  /* line 55, ../scss/_tickets.scss */
   article.tickets .entry-content h1, article.tickets .entry-content h2, article.tickets .entry-content h3 {
     font-weight: 400; }
-    /* line 35, ../scss/_tickets.scss */
+    /* line 57, ../scss/_tickets.scss */
     article.tickets .entry-content h1 span, article.tickets .entry-content h2 span, article.tickets .entry-content h3 span {
       color: #f0cf00; }
-  /* line 40, ../scss/_tickets.scss */
+  /* line 62, ../scss/_tickets.scss */
   article.tickets .entry-content h1.entry-title {
     text-align: left;
     font-size: 32px; }
-  /* line 45, ../scss/_tickets.scss */
+  /* line 67, ../scss/_tickets.scss */
   article.tickets .entry-content h2 {
     font-size: 20px;
     line-height: 1.2em; }
-  /* line 50, ../scss/_tickets.scss */
+  /* line 72, ../scss/_tickets.scss */
   article.tickets .entry-content h3 {
     font-size: 16px;
     line-height: 1.2em; }
-  /* line 57, ../scss/_tickets.scss */
+  /* line 79, ../scss/_tickets.scss */
   article.tickets .entry-content .black-button, article.tickets .entry-content .yellow-button {
     border: none;
-    font-size: 16px; }
-  /* line 62, ../scss/_tickets.scss */
+    font-size: 16px;
+    max-width: 320px;
+    clear: both;
+    display: block;
+    margin: 0 auto 5px; }
+    @media only screen and (min-width: 900px) {
+      /* line 79, ../scss/_tickets.scss */
+      article.tickets .entry-content .black-button, article.tickets .entry-content .yellow-button {
+        max-width: none; } }
+  /* line 91, ../scss/_tickets.scss */
   article.tickets .entry-content .black-button {
     background: url(../img/black-button.png);
     background-size: 100% 100%;
     color: #f0cf00; }
-  /* line 68, ../scss/_tickets.scss */
+  /* line 97, ../scss/_tickets.scss */
   article.tickets .entry-content .yellow-button {
     background: url(../img/yellow-button.png);
     background-size: 100% 100%;
