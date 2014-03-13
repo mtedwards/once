@@ -6,24 +6,46 @@ article.tickets .entry-content {
 	
 	
 	.sales-boxes .columns {
-		padding-left: 3px;
-		padding-right: 3px;
+		padding-left: 0;
+		padding-right: 0;
+		
+		@media #{$medium} {
+			padding-left: 3px;
+			padding-right: 3px;
+			&:first-of-type {
+				padding-left: 0;
+			}
+			&:last-of-type {
+				padding-right: 0;
+			}
+		}
 	}
 
 	.nicebox {
 		border: 2px solid $orange;
 		padding: 5px;
 		position: relative;
-		min-height: 240px;
+		margin-bottom: 10px;
+		@media #{$medium} {
+			min-height: 240px;
+		}
 	}
 	
 	.nicebox a.button {
-		position: absolute;
-		bottom: 10px;
-		width: 95%;
-		left: 2.5%;
+		@media #{$medium} {
+			position: absolute;
+			bottom: 10px;
+			width: 95%;
+			max-width: none;
+			left: 2.5%;
+		}
 	}
 	
+	.orangegrad {
+		border: 2px solid $orange;
+		margin-bottom:5px;
+		background: url(../img/orangegrad-bg.png) left bottom repeat-x ;
+	}
 	
 	
 	// TYPOGRAPHY
@@ -57,6 +79,13 @@ article.tickets .entry-content {
 	.black-button, .yellow-button {
 		border: none;
 		font-size: 16px;
+		max-width: 320px;
+		clear: both;
+		display: block;
+		margin: 0 auto 5px;
+		@media #{$medium} {
+			max-width: none;
+		}
 	}
 	
 	.black-button {
