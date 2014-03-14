@@ -120,5 +120,10 @@
 
 	</div>
 	<?php get_sidebar(); ?>
-		
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+		    $(".datepicker").datepicker({ minDate: 0 });
+		    if (jQuery("li.gf_readonly")){ jQuery("li.gf_readonly input").attr("readonly","readonly"); }
+		});
+	</script>
 <?php get_footer(); ?>
