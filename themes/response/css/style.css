@@ -4712,7 +4712,14 @@ ul.orbit-slides-container li img {
 
 /* line 1, ../scss/_tickets.scss */
 article.tickets .entry-content {
-  text-align: center; }
+  text-align: center;
+  	/*
+  .black-button, .yellow-button {
+  		background: url(../img/black-button.png);
+  		background-size: 100% 100%;
+  		color: $yellow;
+  	}
+  */ }
   /* line 8, ../scss/_tickets.scss */
   article.tickets .entry-content .sales-boxes .columns {
     padding-left: 0;
@@ -4730,7 +4737,7 @@ article.tickets .entry-content {
           padding-right: 0; } }
   /* line 24, ../scss/_tickets.scss */
   article.tickets .entry-content .nicebox {
-    border: 2px solid #efc031;
+    border: 2px solid #000;
     padding: 5px;
     position: relative;
     margin-bottom: 10px; }
@@ -4738,38 +4745,43 @@ article.tickets .entry-content {
       /* line 24, ../scss/_tickets.scss */
       article.tickets .entry-content .nicebox {
         min-height: 240px; } }
-  @media only screen and (min-width: 900px) {
-    /* line 34, ../scss/_tickets.scss */
-    article.tickets .entry-content .nicebox a.button {
-      position: absolute;
-      bottom: 10px;
-      width: 95%;
-      max-width: none;
-      left: 2.5%; } }
-  /* line 44, ../scss/_tickets.scss */
+  /* line 36, ../scss/_tickets.scss */
   article.tickets .entry-content .orangegrad {
-    border: 2px solid #efc031;
-    margin-bottom: 5px;
-    background: url(../img/orangegrad-bg.png) left bottom repeat-x; }
-  /* line 55, ../scss/_tickets.scss */
-  article.tickets .entry-content h1, article.tickets .entry-content h2, article.tickets .entry-content h3 {
-    font-weight: 400; }
-    /* line 57, ../scss/_tickets.scss */
-    article.tickets .entry-content h1 span, article.tickets .entry-content h2 span, article.tickets .entry-content h3 span {
-      color: #f0cf00; }
+    margin-bottom: 5px; }
+  /* line 45, ../scss/_tickets.scss */
+  article.tickets .entry-content a {
+    color: #000;
+    text-decoration: underline; }
+    /* line 48, ../scss/_tickets.scss */
+    article.tickets .entry-content a:hover, article.tickets .entry-content a:focus {
+      text-decoration: none; }
+  /* line 53, ../scss/_tickets.scss */
+  article.tickets .entry-content hr {
+    border: solid #000;
+    border-width: 2px 0 0;
+    clear: both;
+    margin: 0 0 0.6em;
+    height: 0; }
   /* line 62, ../scss/_tickets.scss */
+  article.tickets .entry-content h1, article.tickets .entry-content h2, article.tickets .entry-content h3 {
+    font-weight: 600; }
+    /* line 64, ../scss/_tickets.scss */
+    article.tickets .entry-content h1 span, article.tickets .entry-content h2 span, article.tickets .entry-content h3 span {
+      font-weight: 400; }
+  /* line 69, ../scss/_tickets.scss */
   article.tickets .entry-content h1.entry-title {
-    text-align: left;
-    font-size: 32px; }
-  /* line 67, ../scss/_tickets.scss */
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 0; }
+  /* line 75, ../scss/_tickets.scss */
   article.tickets .entry-content h2 {
     font-size: 20px;
     line-height: 1.2em; }
-  /* line 72, ../scss/_tickets.scss */
+  /* line 80, ../scss/_tickets.scss */
   article.tickets .entry-content h3 {
     font-size: 16px;
     line-height: 1.2em; }
-  /* line 79, ../scss/_tickets.scss */
+  /* line 88, ../scss/_tickets.scss */
   article.tickets .entry-content .black-button, article.tickets .entry-content .yellow-button {
     border: none;
     font-size: 16px;
@@ -4778,16 +4790,55 @@ article.tickets .entry-content {
     display: block;
     margin: 0 auto 5px; }
     @media only screen and (min-width: 900px) {
-      /* line 79, ../scss/_tickets.scss */
+      /* line 88, ../scss/_tickets.scss */
       article.tickets .entry-content .black-button, article.tickets .entry-content .yellow-button {
         max-width: none; } }
-  /* line 91, ../scss/_tickets.scss */
-  article.tickets .entry-content .black-button {
-    background: url(../img/black-button.png);
-    background-size: 100% 100%;
-    color: #f0cf00; }
-  /* line 97, ../scss/_tickets.scss */
-  article.tickets .entry-content .yellow-button {
+  /* line 108, ../scss/_tickets.scss */
+  article.tickets .entry-content .black-button, article.tickets .entry-content .yellow-button {
     background: url(../img/yellow-button.png);
     background-size: 100% 100%;
-    color: #000; }
+    color: #000;
+    text-decoration: none; }
+  /* line 115, ../scss/_tickets.scss */
+  article.tickets .entry-content .black-button:hover {
+    position: relative;
+    top: 2px; }
+  @media only screen and (min-width: 900px) {
+    /* line 122, ../scss/_tickets.scss */
+    article.tickets .entry-content .nicebox a.yellow-button {
+      position: absolute;
+      bottom: 10px;
+      width: 95%;
+      max-width: none;
+      left: 2.5%; }
+      /* line 129, ../scss/_tickets.scss */
+      article.tickets .entry-content .nicebox a.yellow-button:hover {
+        position: absolute;
+        bottom: 8px; } }
+  /* line 136, ../scss/_tickets.scss */
+  article.tickets .entry-content .sponsors a {
+    text-decoration: none; }
+
+@media only screen and (min-width: 900px) {
+  /* line 146, ../scss/_tickets.scss */
+  form#gform_5 .half input, form#gform_4 .half input {
+    width: 95%; }
+  /* line 149, ../scss/_tickets.scss */
+  form#gform_5 .half .custom.dropdown.large, form#gform_4 .half .custom.dropdown.large {
+    width: 95%; } }
+/* line 154, ../scss/_tickets.scss */
+form#gform_5 .custom.dropdown, form#gform_4 .custom.dropdown {
+  border: none;
+  background: url(../img/form-field-background.png) no-repeat;
+  background-size: 100% 100%; }
+/* line 159, ../scss/_tickets.scss */
+form#gform_5 input#gform_submit_button_4, form#gform_5 input#gform_submit_button_5, form#gform_4 input#gform_submit_button_4, form#gform_4 input#gform_submit_button_5 {
+  background: url(../img/yellow-button.png);
+  background-size: 100% 100%;
+  color: #000;
+  text-decoration: none;
+  border: none;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  display: block; }

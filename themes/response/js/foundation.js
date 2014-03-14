@@ -24,6 +24,8 @@
 // @codekit-prepend "foundation/foundation.topbar.js", "foundation/foundation.orbit.js"
 // @codekit-prepend "fitvids.js"
 // @codekit-prepend "respond.js"
+// @codekit-prepend "cookie.js"
+// @codekit-prepend "utm.js"
 
 
 $(document ).ready(function() {

@@ -1,5 +1,5 @@
 article.tickets .entry-content {
-	$yellow: #f0cf00;
+	$yellow: #b84802;
 	$orange: #efc031;
 	
 	// LAYOUT
@@ -22,7 +22,7 @@ article.tickets .entry-content {
 	}
 
 	.nicebox {
-		border: 2px solid $orange;
+		border: 2px solid #000;
 		padding: 5px;
 		position: relative;
 		margin-bottom: 10px;
@@ -31,37 +31,45 @@ article.tickets .entry-content {
 		}
 	}
 	
-	.nicebox a.button {
-		@media #{$medium} {
-			position: absolute;
-			bottom: 10px;
-			width: 95%;
-			max-width: none;
-			left: 2.5%;
-		}
-	}
+
 	
 	.orangegrad {
-		border: 2px solid $orange;
+		//border: 2px solid $orange;
 		margin-bottom:5px;
-		background: url(../img/orangegrad-bg.png) left bottom repeat-x ;
+		//background: url(../img/orangegrad-bg.png) left bottom repeat-x ;
 	}
 	
 	
 	// TYPOGRAPHY
 	
+	a {
+		color: #000;
+		text-decoration: underline;
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+	
+	hr {
+		border: solid #000;
+		border-width: 2px 0 0;
+		clear: both;
+		margin: 0 0 0.6em;
+		height: 0;
+	}
 	
 	text-align: center;
 	h1, h2, h3 {
-		font-weight: 400;
+		font-weight: 600;
 		span {
-			color: $yellow;
+			font-weight: 400;
 		}
 	}
 	
 	h1.entry-title {
-		text-align: left;
-		font-size: 32px;
+		text-align: center;
+		font-size: 26px;
+		margin-bottom: 0;
 	}
 	
 	h2 {
@@ -70,6 +78,7 @@ article.tickets .entry-content {
 	}
 	
 	h3 {
+		
 		font-size: 16px;
 		line-height: 1.2em;
 	}
@@ -88,17 +97,74 @@ article.tickets .entry-content {
 		}
 	}
 	
-	.black-button {
+	/*
+.black-button, .yellow-button {
 		background: url(../img/black-button.png);
 		background-size: 100% 100%;
 		color: $yellow;
 	}
+*/
 	
-	.yellow-button {
+	.black-button, .yellow-button {
 		background: url(../img/yellow-button.png);
 		background-size: 100% 100%;
 		color: #000;
+		text-decoration: none;
 	}
 	
+	.black-button:hover {
+			position: relative;
+			top:2px;
+		}
 	
+	
+	
+	.nicebox a.yellow-button {
+		@media #{$medium} {
+			position: absolute;
+			bottom: 10px;
+			width: 95%;
+			max-width: none;
+			left: 2.5%;
+			&:hover {
+				position: absolute;
+				bottom: 8px;
+			}
+		}
+	}
+	
+	.sponsors a {
+		text-decoration: none;
+	}
+}
+
+// Groups Form
+
+form#gform_5, form#gform_4 {
+	@media #{$medium} {
+			.half {
+				input {
+					width: 95%;
+				}
+				.custom.dropdown.large {
+					width:95%;
+				}
+			}
+		}
+	.custom.dropdown {
+		border: none;
+		background: url(../img/form-field-background.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	input#gform_submit_button_4, input#gform_submit_button_5 {
+		background: url(../img/yellow-button.png);
+		background-size: 100% 100%;
+		color: #000;
+		text-decoration: none;
+		border: none;
+		width: 100%;
+		max-width: 320px;
+		margin: 0 auto;
+		display: block;
+	}
 }

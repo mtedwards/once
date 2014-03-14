@@ -11,7 +11,7 @@
 			    <?php if($waitlist) { ?>
   			     Waitlist for Melbourne
 			    <?php } else { ?>
-			      Book Tickets in Melbourne
+			      Book Melbourne Tickets Online
 			    <?php } ?>
 			   </h1>
 			  <?php if($waitlist) { 
@@ -23,14 +23,13 @@
 	  			  	<div class="row">
 	  			  		<div class="small-12 medium-8 medium-centered large-6 large-centered columns">
 		  			  		
-		  			  		<h2>Book Tickets Online<br><span>Via <?php the_field('ticket_company'); ?></span></h2>
+		  			  		<h3>Via <?php the_field('ticket_company'); ?></h3>
 		  			  		
 		  			  		<a href="<?php the_field('tickets_url') ?>" class="black-button button expand" 
-		  			  		
-		  			  		onClick="_gaq.push(['_trackEvent', 'Outbound', 'Purchase', 'tickets <?php the_title() ?>']);">
+		  			  		onClick="ga('send', 'event', 'outbound', 'purchase','ticketmaster');">
 		  			  			Book Now
 		  			  		</a>
-		  			  		
+		  			  		<h3>Phone <?php the_field('tickets_phone'); ?> or <a href="<?php the_field('ticket_outlets_url'); ?>" target="_blank">Visit an Outlet</a></h3>
 	  			  		</div>
 	  			  	</div>
   			  	</div>
@@ -40,11 +39,11 @@
   			 	<div class="small-12 medium-4 columns">
   			 		<div class="nicebox">
 	  			 		<h2><?php the_field('groups_heading'); ?></h2>
-	  			 		
+	  			 		<hr>
 	  			 		<h2><span><?php the_field('group_message'); ?></span></h2>
 	  			 		
-	  			 		<a href="mailto:<?php the_field('group_email'); ?>" class="yellow-button button expand" 
-	  			 		onClick="_gaq.push(['_trackEvent', 'Outbound', 'Purchase', 'groups <?php the_title() ?>']);" target="_blank">
+	  			 		<a href="<?php bloginfo('url'); ?>/group-bookings/" class="yellow-button button expand" 
+	  			 		onClick="ga('send', 'event', 'outbound', 'purchase','groups');">
 	  			 			make enquiry	  			 		
 	  			 		</a>
   			 		</div>
@@ -53,6 +52,7 @@
   			 	<div class="small-12 medium-4 columns">
   			 		<div class="nicebox">
 	  			 		<h2><?php the_field('dates'); ?></h2>
+	  			 		<hr>
 	  			 		<h2>
 	  			 			<span>
 		  			 			<?php the_field('theatre'); ?>
@@ -72,19 +72,19 @@
   			 		<div class="nicebox">
 		  			 	<h2>
 		  			 		<?php the_field('special_heading'); ?>
-		  			 		<br>
+		  			 		<hr>
 		  			 		<span>
 		  			 			<?php the_field('special_details'); ?>
 		  			 		</span>
 		  			 	</h2>
 		  			 	
-		  			 	<a href="<?php the_field('special_link') ?>" 
-		  			 	onClick="_gaq.push(['_trackEvent', 'Outbound', 'Purchase', 'tickets <?php the_title() ?>']);">
+		  			 	<a href="<?php the_field('special_link') ?>" target="_blank"
+		  			 	onClick="ga('send', 'event', 'outbound', 'purchase','showbiz');">
 		  			 		<img src="<?php the_field('special_image'); ?>" alt="<?php the_field('special_heading'); ?>">
 		  			 	</a>
 		  			 	
-		  			 	<a href="<?php the_field('special_link') ?>" class="yellow-button button expand" 
-		  			 	onClick="_gaq.push(['_trackEvent', 'Outbound', 'Purchase', 'tickets <?php the_title() ?>']);">
+		  			 	<a href="<?php the_field('special_link') ?>" class="yellow-button button expand" target="_blank" 
+		  			 	onClick="ga('send', 'event', 'outbound', 'purchase','showbiz');">
 		  			 		<?php the_field('special_button') ?>
 		  			 	
 		  			 	</a>
@@ -99,11 +99,12 @@
                 <?php
                   $sponsors = get_field('sponsors'); 
                   if($sponsors) { ?>
-                   <div class="small-12 columns center">
+                   <div class="small-12 columns center sponsors">
                     <br>
                     <?php foreach($sponsors as $sponsor) { ?>
-                    	<a href="<?php echo $sponsor['sponsor_link'] ?>" target="_blank" 
-                    	onClick="_gaq.push(['_trackEvent', 'Outbound', 'Sponsor', '<?php echo $sponsor['title'] ?>']);">
+                    	<a href="<?php echo $sponsor['sponsor_link'] ?>" target="_blank"
+                    	onClick="ga('send', 'event', 'outbound', 'sponsor','<?php echo $sponsor['title'] ?>']);">
+
 	                    	<img src="<?php echo $sponsor['sponsor_image']; ?>">
                     	</a>
                     <?php } // end foreach ?>
