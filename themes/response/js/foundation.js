@@ -30,7 +30,23 @@
 
 $(document ).ready(function() {
     $(document).foundation();
+
+    
     $(".entry-content").fitVids();
+    
+    
+	if($('.videos').length){
+		$(function(){
+			thumbs = $('.videos li a');
+			vid = $(thumbs).first().data("vid");
+			$('.video-object iframe').attr('src',vid);
+			$(thumbs).click(function(){
+			  vid = $(this).data("vid");
+			  $('.video-object iframe').attr('src',vid);
+			  return false;
+			});
+		});
+	}
     
     // @codekit-prepend "slideshow.js"
     

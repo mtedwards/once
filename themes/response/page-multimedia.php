@@ -57,13 +57,47 @@
 						?>
 					</div>
 				</div>
-				<!--
-<div class="row">
+				<?php 
+					$videos = get_field('videoslider');
+					if($videos){
+				?>
+				<div class="row">
 					<div class="small-12 columns">
 						<h5>Video Library</h5>
 					</div>
 				</div>
--->
+				<div class="row">
+					<div class="small-12 columns">
+						<div class="video-object flex-video widescreen">
+   				  	      <iframe width="652" height="366" src="" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+				  	    </div>
+				  	    <hr>
+				  	    <ul class="videos small-block-grid-2 large-block-grid-3">
+				  	    	<?php foreach($videos as $video) { 
+				  	    		$url = $video['video'];
+								 $pos = strpos($url, 'youtube');
+								 if ($pos === false) {
+										//YouTu.be
+										$url =  str_replace("http://youtu.be/","",$url);
+										$image = 'http://img.youtube.com/vi/' . $url . '/0.jpg';
+										$video_url = 'http://www.youtube.com/embed/' . $url;
+									} else {
+										//YouTube
+										$url =  str_replace("http://www.youtube.com/watch?v=","",$url);
+										$image = 'http://img.youtube.com/vi/' . $url . '/0.jpg';
+										$video_url = 'http://www.youtube.com/embed/' . $url;
+								  } ?>
+
+				  	    	<li>
+				  	    		<a href="#" data-vid="<?php echo $video_url; ?>">
+			  			      		<img src="<?php echo $image; ?>"></img>
+			  				  	</a>
+				  	    	</li>
+				  	    	<?php } // end for each ?>
+				  	    </ul>
+					</div>
+				</div>
+				<?php } // end if $videos ?>
 			</div>
 		</article>
 	<?php endwhile; // End the loop ?>
