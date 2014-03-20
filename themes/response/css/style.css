@@ -4736,6 +4736,37 @@ ul.orbit-slides-container li img {
   font-weight: bold;
   font-size: 1.1em; }
 
+/*
+ul.videos {
+	//height: 60px;
+	width: 100%;
+	display: block;
+	li {
+		display: inline;
+		img {width: 120px;}
+		
+	}
+	
+}
+*/
+/* line 37, ../scss/_multimedia.scss */
+.videos a {
+  display: block;
+  margin-right: 4px;
+  float: left;
+  color: #000; }
+  /* line 42, ../scss/_multimedia.scss */
+  .videos a img {
+    margin-bottom: 0; }
+
+/* line 48, ../scss/_multimedia.scss */
+.button-box {
+  margin-top: 5px; }
+  /* line 50, ../scss/_multimedia.scss */
+  .button-box a.button.yellow {
+    color: #000;
+    font-weight: bold; }
+
 /* line 1, ../scss/_tickets.scss */
 article.tickets .entry-content {
   text-align: center;

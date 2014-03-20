@@ -29,7 +29,7 @@
 		  			  		onClick="ga('send', 'event', 'outbound', 'purchase','ticketmaster');">
 		  			  			Book Now
 		  			  		</a>
-		  			  		<h3>Phone <?php the_field('tickets_phone'); ?> or <a href="<?php the_field('ticket_outlets_url'); ?>" target="_blank">Visit an Outlet</a></h3>
+		  			  		<h3>Phone <?php the_field('tickets_phone'); ?> or <a href="<?php the_field('ticket_outlets'); ?>" target="_blank">Visit an Outlet</a></h3>
 	  			  		</div>
 	  			  	</div>
   			  	</div>
@@ -120,10 +120,4 @@
 
 	</div>
 	<?php get_sidebar(); ?>
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-		    $(".datepicker").datepicker({ minDate: 0 });
-		    if (jQuery("li.gf_readonly")){ jQuery("li.gf_readonly input").attr("readonly","readonly"); }
-		});
-	</script>
 <?php get_footer(); ?>

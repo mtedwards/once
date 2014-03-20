@@ -66,13 +66,15 @@
 						<h5>Video Library</h5>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row" id="videoSection">
 					<div class="small-12 columns">
 						<div class="video-object flex-video widescreen">
-   				  	      <iframe width="652" height="366" src="" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-				  	    </div>
+							<iframe width="652" height="366" src="" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+						</div>
 				  	    <hr>
-				  	    <ul class="videos small-block-grid-2 large-block-grid-3">
+					</div>
+					<div class="small-12 columns videoSlider">
+		  	    		<div class="videos">
 				  	    	<?php foreach($videos as $video) { 
 				  	    		$url = $video['video'];
 								 $pos = strpos($url, 'youtube');
@@ -88,14 +90,23 @@
 										$video_url = 'http://www.youtube.com/embed/' . $url;
 								  } ?>
 
-				  	    	<li>
 				  	    		<a href="#" data-vid="<?php echo $video_url; ?>">
 			  			      		<img src="<?php echo $image; ?>"></img>
+			  			      		<small><?php echo $video['title']; ?></small>
 			  				  	</a>
-				  	    	</li>
 				  	    	<?php } // end for each ?>
-				  	    </ul>
-					</div>
+				  	    </div>
+				  	</div>
+				  	<div class="small-12 columns button-box">
+						<div class="row">
+					  		<div class="small-6 large-3 columns">
+								<a id="prev" class="prev button expand yellow small" href="#">&lt;</a>
+					  		</div>
+					  		<div class="small-6 large-3 columns">
+						  		<a id="next" class="next button expand yellow small" href="#">&gt;</a>
+					  		</div>
+					  	</div>				  		
+				  	</div>
 				</div>
 				<?php } // end if $videos ?>
 			</div>

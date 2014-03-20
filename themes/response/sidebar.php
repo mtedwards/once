@@ -1,7 +1,7 @@
 <aside id="sidebar" class="small-12 large-3 medium-3 columns sidebar">
   <div class="row">
   	<div class="large-12 medium-12 small-4 columns">
-  	  <h3>waitlist now*:</h3>
+  	  <h5>TICKETS NOW ONSALE<br>Sign Up for Our Enewsletter</h5>
   		<iframe src="" width="160" height="60" style="margin:0; padding:0;" scrolling="no" onload="javascript: if(typeof ewt != 'undefined' && ewt && ewt.setIFrameSrc) ewt.setIFrameSrc(this, 'http://acmn.pty.mkt3562.com/Once/Website-social-signin'); else if(this.src != 'http://acmn.pty.mkt3562.com/Once/Website-social-signin') this.src = 'http://acmn.pty.mkt3562.com/Once/Website-social-signin';" >
         <p>Your browser does not support iframes.</p>
       </iframe>

@@ -24,6 +24,7 @@
 // @codekit-prepend "foundation/foundation.topbar.js", "foundation/foundation.orbit.js"
 // @codekit-prepend "fitvids.js"
 // @codekit-prepend "respond.js"
+// @codekit-prepend "jquery.carouFredSel-6.2.1.js"
 // @codekit-prepend "cookie.js"
 // @codekit-prepend "utm.js"
 
@@ -33,21 +34,7 @@ $(document ).ready(function() {
 
     
     $(".entry-content").fitVids();
-    
-    
-	if($('.videos').length){
-		$(function(){
-			thumbs = $('.videos li a');
-			vid = $(thumbs).first().data("vid");
-			$('.video-object iframe').attr('src',vid);
-			$(thumbs).click(function(){
-			  vid = $(this).data("vid");
-			  $('.video-object iframe').attr('src',vid);
-			  return false;
-			});
-		});
-	}
-    
+ 
     // @codekit-prepend "slideshow.js"
     
     //form validation
@@ -157,4 +144,52 @@ $(document ).ready(function() {
       
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs'); 
     }
+    
+    
+    	//are we on the Cast & Creatives Page?
+	if (jQuery('#videoSection').length>0) {
+		initVideo();
+	}
+    
+    // Video Player on Multimedia page
+    
+    function initVideo() {
+		$(function(){
+			thumbs = $('.videos a');
+			vid = $(thumbs).first().data("vid");
+			$('.video-object iframe').attr('src',vid);
+			$(thumbs).click(function(){
+			  vid = $(this).data("vid");
+			  $('.video-object iframe').attr('src',vid);
+			  return false;
+			});
+		});
+		
+		var carousel = $("#videoSection .videos");
+		
+		carousel.carouFredSel({
+		responsive: true,
+		auto: true,
+		width: '100%',
+		height: "auto",
+		scroll: 1,
+		prev: '#prev',
+		next: '#next',
+		auto: false,
+		items: {
+			width: 120,
+			//height: 100,
+			visible: {
+				min: 4,
+				max: 4
+			}
+		},
+		onCreate: function () {
+		    $(window).on('resize', function () {
+		      carousel.parent().add(carousel).height(carousel.children().first().height());
+		    }).trigger('resize');
+		  }
+	});	    
+  }
+
 });
