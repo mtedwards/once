@@ -4612,7 +4612,7 @@ p.lead {
 @media screen and (min-width: 665px) {
   /* line 4, ../scss/_front-page.scss */
   body.home section.main-document {
-    background: url(../img/home-bg3.jpg);
+    background: url(../img/bg-3.jpg);
     background-size: cover;
     height: 568px; }
     /* line 8, ../scss/_front-page.scss */
