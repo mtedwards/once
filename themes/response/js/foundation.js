@@ -31,7 +31,9 @@
 
 $(document ).ready(function() {
     $(document).foundation();
+    
 
+    
     
     $(".entry-content").fitVids();
  
@@ -191,5 +193,9 @@ $(document ).ready(function() {
 		  }
 	});	    
   }
+  
+  
+ 
+    
 
 });

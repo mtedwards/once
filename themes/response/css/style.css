@@ -2903,11 +2903,11 @@ label.error {
   padding-top: 1.5625em;
   padding-bottom: 67.5%;
   height: 0;
-  margin-bottom: 1em;
+  margin-bottom: 0;
   overflow: hidden; }
   /* line 26, ../scss/foundation/components/_flex-video.scss */
   .flex-video.widescreen {
-    padding-bottom: 57.25%; }
+    padding-bottom: 51%; }
   /* line 27, ../scss/foundation/components/_flex-video.scss */
   .flex-video.vimeo {
     padding-top: 0; }
@@ -4417,6 +4417,19 @@ header.main-header h1 a {
       .itunes .mejs-container .mejs-controls .mejs-playpause-button.mejs-pause button {
         background: url("../img/pause.png") no-repeat 0 0 !important; }
 
+/* line 214, ../scss/_header.scss */
+.youtube-box .flex-video {
+  position: relative; }
+  /* line 216, ../scss/_header.scss */
+  .youtube-box .flex-video img#vidBoard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: none; }
+
 /* line 2, ../scss/_footer.scss */
 .main-footer p {
   font-size: 0.7em;
@@ -4624,7 +4637,7 @@ p.lead {
     /* line 15, ../scss/_front-page.scss */
     body.home section.main-document .tony {
       position: relative;
-      margin-top: 40px;
+      margin-top: 20px;
       margin-left: -330px;
       margin-bottom: 10px;
       width: 75%; }
@@ -4638,20 +4651,62 @@ p.lead {
       /* line 15, ../scss/_front-page.scss */
       body.home section.main-document .tony {
         margin-left: -310px;
-        width: 120%; } }
+        width: 100%; } }
+    @media screen and (min-width: 665px) and (min-width: 665px) {
+      /* line 28, ../scss/_front-page.scss */
+      body.home section.main-document .itunes {
+        display: none; } }
 
-/* line 38, ../scss/_front-page.scss */
+/* line 41, ../scss/_front-page.scss */
 .byline {
   display: none; }
   @media screen and (min-width: 665px) {
-    /* line 38, ../scss/_front-page.scss */
+    /* line 41, ../scss/_front-page.scss */
     .byline {
       display: block;
       position: absolute;
-      top: 420px;
-      left: -90%;
+      width: 380px;
+      text-align: center;
+      top: 505px;
+      left: 50%;
+      margin-left: -190px;
+      text-align: left;
       font-size: 25px;
       line-height: 1.5em; } }
+
+/* line 57, ../scss/_front-page.scss */
+.youtube-box {
+  background: #000;
+  clear: both;
+  width: 95%;
+  margin: 5px 2.5% 10px;
+  border: 2px solid #fff; }
+  @media screen and (min-width: 560px) {
+    /* line 57, ../scss/_front-page.scss */
+    .youtube-box {
+      display: block;
+      width: 95%;
+      margin: 23% 2.5% 5px; } }
+  @media screen and (min-width: 665px) {
+    /* line 57, ../scss/_front-page.scss */
+    .youtube-box {
+      margin: 0;
+      position: absolute;
+      top: 225px;
+      left: 20px;
+      width: 65%;
+      z-index: 100000;
+      max-width: 480px;
+      height: auto; } }
+  @media screen and (min-width: 900px) {
+    /* line 57, ../scss/_front-page.scss */
+    .youtube-box {
+      position: absolute;
+      top: 225px;
+      left: 20px;
+      width: 65%;
+      z-index: 100000;
+      max-width: auto; } }
 
 /* line 2, ../scss/_buzz.scss */
 .buzz img {
