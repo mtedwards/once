@@ -43,14 +43,38 @@ body.home {
 	@media screen and (min-width:665px){
 		display: block;
 		position: absolute;
-		width:380px;
-		text-align: center;
+		width:100%;
+		text-align: left;
 		top:505px;
-		left:50%;
-		margin-left: -190px;
+		left:20px;
+		//margin-left: -290px;
 		text-align: left;
 		font-size: 25px;
 		line-height: 1.5em;
+		.button {
+  		color: #111;
+  		margin-right: 10%;
+  		z-index: 100000;
+  		background: white;
+  		font-size: 1.1em;
+  		padding: 7px 15px;
+  		-moz-box-shadow:    0 0 5px 3px rgba(#000,0.4);
+      -webkit-box-shadow: 0 0 5px 3px rgba(#000,0.4);
+      box-shadow:         0 0 5px 3px rgba(#000,0.4);
+      text-shadow: 0 1px 1px silver;
+      &:hover {
+        -moz-box-shadow:    none;
+        -webkit-box-shadow: none;
+        box-shadow:         none;
+      }
+  		
+/*
+  		background: url(../img/button_submit-bgd.png) no-repeat;
+      background-size: 100% 100%;
+      border: none;
+      box-shadow: none;
+*/
+		}
 	}
 }
 
@@ -83,5 +107,24 @@ body.home {
     width:65%;
     z-index: 100000;
     max-width: auto;
+  }
+}
+
+.tickets-button {
+  .button {
+    color: #111;
+		margin-right: 10%;
+		z-index: 100000;
+		background: white;
+		font-size: 1.1em;
+		padding: 7px 15px;
+		-moz-box-shadow:    0 0 5px 3px rgba(#000,0.4);
+    -webkit-box-shadow: 0 0 5px 3px rgba(#000,0.4);
+    box-shadow:         0 0 5px 3px rgba(#000,0.4);
+    text-shadow: 0 1px 1px silver;
+   // margin: 3px 10px;      
+  }
+  @media screen and (min-width:665px){
+    display: none;
   }
 }

@@ -122,7 +122,7 @@
   	<header class="main-header container row">
   	  <?php if(is_front_page()) { ?>
   	     <div class="byline">
-	  	   	his music needed one thing.&nbsp;her.
+	  	   	<a class="button small radius" onClick="ga('send', 'event', 'homepage', 'click','tickets');" href="<?php bloginfo('url'); ?>/tickets">tickets</a>&nbsp;&nbsp;&nbsp;&nbsp;his music needed one thing.&nbsp;her.
   	   	</div>
   	 <?php } ?>
   	 <div class="small-12 medium-6 columns">
@@ -141,70 +141,81 @@
         </div>
         <?php } ?>
       </div> 
+      <?php if(is_front_page()) { ?>
   	 <div class="youtube-box">
   	  <div class="flex-video widescreen">
   	      <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
           <div id="player"></div>
-          <img id="vidBoard" src="<?php bloginfo('template_url') ?>/img/onceVidBoard.jpg" alt="Video Board">
+          <img onClick="ga('send', 'event', 'onpage', 'click','replay video');" id="vidBoard" src="<?php the_field('video_board'); ?>" alt="Video Board">
   	  </div>
       <script>
-        // 2. This code loads the IFrame Player API code asynchronously.
-        var tag = document.createElement('script');
-  
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  
-        // 3. This function creates an <iframe> (and YouTube player)
-        //    after the API code downloads.
-        var player;
-        function onYouTubeIframeAPIReady() {
-          player = new YT.Player('player', {
-            height: '264',
-            width: '464',
-            videoId: 'N-gO-mU1mNk',
-            playerVars: {
-              'rel': 0,
-            },
-            events: {
-              'onReady': onPlayerReady,
-              'onStateChange': onPlayerStateChange
-            }
-          });
-        }
-  
-        // 4. The API will call this function when the video player is ready.
-        function onPlayerReady(event) {
-          //$(".youtube-box").fitVids();
-          event.target.playVideo();
-        }
-  
-        // 5. The API calls this function when the player's state changes.
-        //    The function indicates that when playing a video (state=1),
-        //    the player should play for six seconds and then stop.
-        var done = false;
-        function onPlayerStateChange(event) {
-          if (event.data == YT.PlayerState.ENDED) {
-            mattVidEnd();
+        if ($(window).width() > 900) {
+          // 2. This code loads the IFrame Player API code asynchronously.
+          var tag = document.createElement('script');
+    
+          tag.src = "https://www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+          // 3. This function creates an <iframe> (and YouTube player)
+          //    after the API code downloads.
+          var player;
+          function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+              height: '264',
+              width: '464',
+              videoId: '<?php the_field('youtube_video_code'); ?>',
+              playerVars: {
+                'rel': 0,
+              },
+              events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+              }
+            });
           }
+    
+          // 4. The API will call this function when the video player is ready.
+          function onPlayerReady(event) {
+            //$(".youtube-box").fitVids();
+            event.target.playVideo();
+          }
+    
+          // 5. The API calls this function when the player's state changes.
+          //    The function indicates that when playing a video (state=1),
+          //    the player should play for six seconds and then stop.
+          var done = false;
+          function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+              mattVidEnd();
+            }
+          }
+          
+          function mattVidEnd() {
+            $('.youtube-box iframe').fadeOut();
+            $('.youtube-box .flex-video').addClass('startVid');
+            $('#vidBoard').fadeIn();
+          }
+          
+          $('.youtube-box').on('click','.startVid',function(){ 
+              startVideo();
+            });
+                    
+          function startVideo() {
+            $('#vidBoard').fadeOut();
+            $('.youtube-box iframe').fadeIn();
+            player.playVideo();
+          }
+        } else {
+          $('#player').html('<iframe width="640" height="360" src="//www.youtube.com/embed/<?php the_field('youtube_video_code'); ?>" frameborder="0" allowfullscreen></iframe>');
         }
-        
-        function mattVidEnd() {
-          $('.youtube-box iframe').fadeOut();
-          $('.youtube-box .flex-video').addClass('startVid');
-          $('#vidBoard').fadeIn();
-        }
-        
-        $('.youtube-box').on('click','.startVid',function(){ 
-            startVideo();
-          });
-                  
-        function startVideo() {
-          $('#vidBoard').fadeOut();
-          $('.youtube-box iframe').fadeIn();
-          player.playVideo();
-        }
-      </script>     
+      </script>  
+      
     </div>
+      <div class="small-12 columns tickets-button">
+        <a onClick="ga('send', 'event', 'homepage', 'click','tickets');" class="button small expand radius" href="<?php bloginfo('url'); ?>/tickets">tickets</a>
+      </div>
+    
+     <?php } // enf if is front page ?>  
   	</header>
 <!-- Start the main container -->

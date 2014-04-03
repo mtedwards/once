@@ -148,7 +148,7 @@ $(document ).ready(function() {
     }
     
     
-    	//are we on the Cast & Creatives Page?
+    	//are we on the Video Page?
 	if (jQuery('#videoSection').length>0) {
 		initVideo();
 	}

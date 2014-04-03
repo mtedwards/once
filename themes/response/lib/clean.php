@@ -122,7 +122,7 @@ function reverie_scripts_and_styles() {
     wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js", false, null, false);
     
     // adding Foundation scripts file in the footer
-    wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation-ck.js', array( 'jquery' ), '201403171130', true );
+    wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation-ck.js', array( 'jquery' ), '201403281119', true );
     
     if ($is_IE) {
        wp_register_script ( 'html5shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js" , false, true);
