@@ -1,5 +1,5 @@
 /themes/response/.sass-cache/
 /exports/**
-plugins/**/**
-/upgrade/**
+plugins/*/*
+upgrade/**
 /uploads/**
