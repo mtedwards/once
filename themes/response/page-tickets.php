@@ -36,7 +36,7 @@
   			  </div>
   			 <div class="row sales-boxes">
   			 
-  			 	<div class="small-12 medium-4 columns">
+  			 	<div class="small-12 medium-6 columns">
   			 		<div class="nicebox">
 	  			 		<h2><?php the_field('groups_heading'); ?></h2>
 	  			 		<hr>
@@ -49,7 +49,7 @@
   			 		</div>
   			 	</div>
   			 	
-  			 	<div class="small-12 medium-4 columns">
+  			 	<div class="small-12 medium-6 columns">
   			 		<div class="nicebox">
 	  			 		<h2><?php the_field('dates'); ?></h2>
 	  			 		<hr>
@@ -68,28 +68,6 @@
 		  			 </div>
   			 	</div>
   			 	
-  			 	<div class="small-12 medium-4 columns">
-  			 		<div class="nicebox">
-		  			 	<h2>
-		  			 		<?php the_field('special_heading'); ?>
-		  			 		<hr>
-		  			 		<span>
-		  			 			<?php the_field('special_details'); ?>
-		  			 		</span>
-		  			 	</h2>
-		  			 	
-		  			 	<a href="<?php the_field('special_link') ?>" target="_blank"
-		  			 	onClick="ga('send', 'event', 'outbound', 'purchase','showbiz');">
-		  			 		<img src="<?php the_field('special_image'); ?>" alt="<?php the_field('special_heading'); ?>">
-		  			 	</a>
-		  			 	
-		  			 	<a href="<?php the_field('special_link') ?>" class="yellow-button button expand" target="_blank" 
-		  			 	onClick="ga('send', 'event', 'outbound', 'purchase','showbiz');">
-		  			 		<?php the_field('special_button') ?>
-		  			 	
-		  			 	</a>
-		  			 </div>
-  			 	</div>
   			 </div>                        
   			 <div class="row">
   			 	<div class="small-12 columns">
