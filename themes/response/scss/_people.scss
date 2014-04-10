@@ -1,0 +1,46 @@
+.creatives {
+    
+  .entry-content {
+    margin-bottom: 3em;
+    position: relative;
+    padding: 1em 1.5em 0;
+    &:after {
+      background: url(../img/content-bottom.png) no-repeat;
+      width: 99.7%;
+      display: block;
+      position: absolute;
+      height: 12px;
+      bottom: -12px;
+      left: -1px;
+    }
+    .people-header {
+      margin-bottom: 1em; 
+      h1, h4 {
+        display: inline;
+        line-height: 1em;
+        font-weight: 300;
+      }
+      
+      h1 {
+        font-size: 1.5em;
+      }
+      
+      h4 {
+        font-size: 0.9em;
+        font-style: italic;
+      }
+    }
+  }
+  
+  .title {
+    padding: 0.5em 1.5em 0.5em !important;
+    h1 {
+      font-size: 2em;
+      font-weight: 300;
+      line-height: 1em;
+      margin: 0;
+    }
+  }
+  
+  
+}

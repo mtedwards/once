@@ -4899,3 +4899,42 @@ form#gform_5 input#gform_submit_button_4, form#gform_5 input#gform_submit_button
   max-width: 320px;
   margin: 0 auto;
   display: block; }
+
+/* line 3, ../scss/_people.scss */
+.creatives .entry-content {
+  margin-bottom: 3em;
+  position: relative;
+  padding: 1em 1.5em 0; }
+  /* line 7, ../scss/_people.scss */
+  .creatives .entry-content:after {
+    background: url(../img/content-bottom.png) no-repeat;
+    width: 99.7%;
+    display: block;
+    position: absolute;
+    height: 12px;
+    bottom: -12px;
+    left: -1px; }
+  /* line 16, ../scss/_people.scss */
+  .creatives .entry-content .people-header {
+    margin-bottom: 1em; }
+    /* line 18, ../scss/_people.scss */
+    .creatives .entry-content .people-header h1, .creatives .entry-content .people-header h4 {
+      display: inline;
+      line-height: 1em;
+      font-weight: 300; }
+    /* line 24, ../scss/_people.scss */
+    .creatives .entry-content .people-header h1 {
+      font-size: 1.5em; }
+    /* line 28, ../scss/_people.scss */
+    .creatives .entry-content .people-header h4 {
+      font-size: 0.9em;
+      font-style: italic; }
+/* line 35, ../scss/_people.scss */
+.creatives .title {
+  padding: 0.5em 1.5em 0.5em !important; }
+  /* line 37, ../scss/_people.scss */
+  .creatives .title h1 {
+    font-size: 2em;
+    font-weight: 300;
+    line-height: 1em;
+    margin: 0; }
