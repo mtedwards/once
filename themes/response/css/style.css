@@ -4121,7 +4121,7 @@ div.navigation {
         div.navigation .row .main-menu li {
           float: left;
           font-size: 1.5em;
-          padding-right: 1em; }
+          padding-right: 0.5em; }
           /* line 46, ../scss/_header.scss */
           div.navigation .row .main-menu li a {
             line-height: 50px;
