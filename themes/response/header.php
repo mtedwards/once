@@ -27,9 +27,26 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <div style="position:absolute;">
+    <!--
+    Start of DoubleClick Floodlight Tag: Please do not remove
+    Activity name of this tag: ONCE Website Visit
+    URL of the webpage where the tag is expected to be placed: http://oncemusical.com.au/
+    This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+    Creation Date: 04/10/2014
+    -->
+    <script type="text/javascript">
+      var axel = Math.random() + "";
+      var a = axel * 10000000000000;
+      document.write('<img src="http://ad.doubleclick.net/activity;src=4396207;type=onceweb;cat=ONCEW0;ord=1;num=' + a + '?" width="1" height="1" alt=""/>');
+    </script>
+    <noscript>
+      <img src="http://ad.doubleclick.net/activity;src=4396207;type=onceweb;cat=ONCEW0;ord=1;num=1?" width="1" height="1" alt=""/>
+    </noscript>
+    <!-- End of DoubleClick Floodlight Tag: Please do not remove -->    
+    </div>
   <div id="fb-root"></div>
   <script>
-  
   if(document.width > 900){
     (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
